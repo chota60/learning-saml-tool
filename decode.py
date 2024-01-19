@@ -8,14 +8,12 @@ with open(file_name, mode='r') as f:
     # デコードして結果を格納
     decode_text = b64decode(input_text).decode()
 
-# xml 形式の文字列になっているので、パースする
-from xml.etree import ElementTree
-root = ElementTree.fromstring(decode_text)
-print(root.tag)
-# 子要素も出力する
-for child in root:
-    print(child.tag, child.text)
-    
+import pprint
+# pprint.pprint(decode_text)
 
-
-
+# xml 形式の文字列だとよく構造がわからないので、 dict に変換してプリントする
+# @がついているものは属性
+# #text はテキスト
+import xmltodict
+dict_data = xmltodict.parse(decode_text, force_cdata=True)
+pprint.pprint(dict_data)

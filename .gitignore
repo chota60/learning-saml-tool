@@ -8,7 +8,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -204,3 +205,7 @@ pyrightconfig.json
 #!! ERROR: python3 is undefined. Use list command to see defined gitignore types !!#
 
 # End of https://www.toptal.com/developers/gitignore/api/python3,python,osx
+
+
+# この repository 特有の ignore
+input.txt
