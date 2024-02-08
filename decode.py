@@ -9,8 +9,9 @@ with open(file_name, mode='r') as f:
     decode_text = b64decode(input_text).decode()
 
 import pprint
-# pprint.pprint(decode_text)
+pprint.pprint(decode_text)
 
+# TODO やっぱり Json でもよくわからないので、 xml で整形して、フォーマットしたファイルにする、みたいにしたいね
 # xml 形式の文字列だとよく構造がわからないので、 dict に変換してプリントする
 # @がついているものは属性
 # #text はテキスト
